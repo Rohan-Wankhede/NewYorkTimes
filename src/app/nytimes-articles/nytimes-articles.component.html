@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="md-form mt-0" *ngIf="!serviceError; else serviceErrorMessage">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]="searchText"
+     width="100%" autocomplete="off"
+     placeholder="Type keywords to search for articles">
+&nbsp;
+     <button (click)="dateSort($event)">
+       <img src="../../assets/images/UpDown.png" height="40px" width="40px" >
+      </button>
+  
+  </div>
+  
+  <ng-template #serviceErrorMessage>
+      The service for the application is down. Please try after some time.
+    </ng-template>
+  <br />
+
+
+  <table #RohanTable name="RohanTable">
+    <tr *ngFor="let item of articles | filter:searchText">
+      <td (click)="getClientItem(item)">
+        <br />
+        <mat-card class="tp-card">
+          <mat-card-header>
+            <mat-card-title>
+              <h2>
+                <u>
+                  <a class='btn'>
+                    <i class="la la-trash" title="{{item.abstract}}">{{item.title}}</i>
+                  </a>
+                </u>
+              </h2>
+            </mat-card-title>
+
+          </mat-card-header>
+          <mat-card-content>
+            <p style="margin: 0 10px;">
+              {{item.abstract}}
+            </p>
+            <p style="margin: 0 10px;">
+                {{item.updated_date | date:'medium'}}
+              </p>
+          </mat-card-content>
+        </mat-card>
+      </td>
+    </tr>
+  </table>
+
+ 
+<ng-template #filterResult>
+    There are no records for the search results. 
+  </ng-template>
+<br />
+
+
+</div>

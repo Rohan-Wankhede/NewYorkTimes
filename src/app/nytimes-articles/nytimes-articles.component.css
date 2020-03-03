@@ -1,0 +1,32 @@
+
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #405065;
+  }
+  
+  /* .search-article {
+    max-width: 80%;
+    padding-bottom: 20px;
+    margin:auto;
+  } */
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+    border: 1px solid green;
+    width: 80%;
+    height: 50px;
+    font-family: FontAwesome;
+    font-size: large;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
+  /* .search-hero {
+    max-width: 500px;
+    padding-bottom: 50px;
+    height: 50px;
+    margin:auto;
+    border: 2px solid red;
+  } */

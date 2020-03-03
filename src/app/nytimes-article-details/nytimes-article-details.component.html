@@ -1,0 +1,21 @@
+<h2><a routerLink="/articles" routerLinkActive="active" title="Back To Home Page">Back</a></h2>
+
+
+<mat-card class="tp-card">
+    <mat-card-header>
+        <mat-card-title>
+            <h2><u><a class='btn'><i class="la la-trash" title="{{data.data.abstract}}">{{data.data.title}}</i></a>
+                </u></h2>
+        </mat-card-title>
+        <mat-card-subtitle>Section - {{data.data.section | uppercase}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="margin: 0 10px;">
+        <p>
+            {{data.data.updated_date | date:'medium'}} - {{data.data.abstract}}
+        </p>
+        <p>
+            <a class="newanchor" href="{{data.data.url}}" title="{{data.data.url}}" target="blank">{{data.data.url}}</a>
+        </p>
+       
+    </mat-card-content>
+</mat-card>
