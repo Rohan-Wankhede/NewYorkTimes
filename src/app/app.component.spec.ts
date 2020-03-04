@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'NewYorkArticles'`, () => {
+  it(`should have as title 'ng-new-york-times-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('NewYorkArticles');
+    expect(app.title).toEqual('ng-new-york-times-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('NewYorkArticles app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ng-new-york-times-app app is running!');
   });
 });
